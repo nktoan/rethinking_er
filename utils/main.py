@@ -3,6 +3,14 @@
 # This source code is licensed under the license found in the
 # LICENSE file in the root directory of this source tree.
 import importlib
+import os
+import sys
+conf_path = os.getcwd()
+sys.path.append(conf_path)
+sys.path.append(conf_path + '/datasets')
+sys.path.append(conf_path + '/backbone')
+sys.path.append(conf_path + '/models')
+
 from datasets import NAMES as DATASET_NAMES
 from models import get_all_models
 from argparse import ArgumentParser
